@@ -1,24 +1,21 @@
-# README
+# useful-rails-api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+フロントエンドの構築をしたいときに使える、雑な API サーバーです。  
+CORS とかの設定もしてないので、ローカルで起動して `127.0.0.1:3000` を叩くだけでなんか JSON が返ってきます。  
 
-Things you may want to cover:
+# usage
 
-* Ruby version
+## server の起動
 
-* System dependencies
+```
+$ cd useful-rails-api
+$ bundle install
+$ bundle exec rails server
+```
 
-* Configuration
+## DB に適当なレコードを追加
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+$ bundle exec rake user:create_10
+$ bundle exec rake datum:create_10
+```
